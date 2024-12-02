@@ -16,9 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Navigate to the project directory
-        run: cd aoc24
-
       - name: Setup rust toolchain, cache and cargo-codspeed binary
         uses: moonrepo/setup-rust@v0
         with:
@@ -27,6 +24,7 @@ jobs:
           bins: cargo-codspeed
 
       - name: Build the benchmark target(s)
+        working-directory: aoc24
         run: cargo codspeed build
 
       - name: Run the benchmarks
