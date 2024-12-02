@@ -13,7 +13,7 @@ fn is_valid_level_difference(nums: &Vec<i32>) -> bool {
     nums.windows(2).all(|window| window[0]>window[1] && 1<=(window[0]-window[1]) && (window[0]-window[1])<=3)
 }
 
-fn part1(input: &str) -> String {
+pub fn part1(input: &str) -> String {
     let mut safe_reports = 0;
     for line in input.lines() {
         let nums: Result<Vec<i32>, _> = line.to_string().split_whitespace().map(|s| s.parse::<i32>()).collect();
@@ -31,7 +31,7 @@ fn part1(input: &str) -> String {
 
 }
 
-fn part2(input: &str) -> String {
+pub fn part2(input: &str) -> String {
     let mut safe_reports = 0;
     for line in input.lines() {
         let nums: Result<Vec<i32>, _> = line.to_string().split_whitespace().map(|s| s.parse::<i32>()).collect();

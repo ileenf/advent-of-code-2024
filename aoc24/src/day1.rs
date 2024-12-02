@@ -27,7 +27,7 @@ fn parse_input(input: &str) -> (Vec<i32>, Vec<i32>) {
     (list1, list2)
 }
 
-fn part1(input: &str) -> String {
+pub fn part1(input: &str) -> String {
     let mut total = 0;
     let (list1, list2) = parse_input(input);
 
@@ -39,7 +39,7 @@ fn part1(input: &str) -> String {
     format!("{}", total)
 }
 
-fn part2(input: &str) -> String {
+pub fn part2(input: &str) -> String {
     let mut similarity_score = 0;
     let (list1, list2) = parse_input(input);
 
