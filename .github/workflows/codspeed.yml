@@ -30,5 +30,6 @@ jobs:
       - name: Run the benchmarks
         uses: CodSpeedHQ/action@v3
         with:
+          working-directory: aoc24
           run: cargo codspeed run
           token: ${{ secrets.CODSPEED_TOKEN }}
