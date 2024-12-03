@@ -1,6 +1,3 @@
-use std::fmt::format;
-
-
 fn main() {
     let input: &str = include_str!("data/day2.txt");
     println!("Answer to part1: {}", part1(input));

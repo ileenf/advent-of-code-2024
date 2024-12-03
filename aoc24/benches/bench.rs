@@ -1,15 +1,15 @@
 use codspeed_criterion_compat::{black_box, criterion_group, criterion_main, Criterion};
 
-use aoc24::day1::{part1, part2};
+use aoc24::day3::{part1, part2};
 
 fn bench_part1(c: &mut Criterion) {
-    let input = include_str!(".././src/data/day1.txt");
-    c.bench_function("part1", |b| b.iter(|| part1(black_box(input))));
+    let input = include_str!(".././src/data/day3.txt");
+    c.bench_function("day3 part1", |b| b.iter(|| part1(black_box(input))));
 }
 
 fn bench_part2(c: &mut Criterion) {
-    let input = include_str!(".././src/data/day1.txt");
-    c.bench_function("part2", |b| b.iter(|| part2(black_box(input))));
+    let input = include_str!(".././src/data/day3.txt");
+    c.bench_function("day3 part2", |b| b.iter(|| part2(black_box(input))));
 }
 
 criterion_group!(benches, bench_part1, bench_part2);
